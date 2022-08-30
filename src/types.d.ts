@@ -4,8 +4,8 @@ export type ListItems<T, V = T> = (pre?: V) => OptionalPromise<T[]>;
 
 export type GetItem<T, V = T> = (pre?: V) => OptionalPromise<T>;
 
-export type WriteAction<T, P = any> = (pre?: P) => OptionalPromise<T>;
+export type WriteAction<T, V = any> = (pre?: V) => OptionalPromise<T>;
 
-export type PreAction<T> = () => OptionalPromise<T>;
+export type PreAction<T = any> = () => OptionalPromise<T>;
 
-export type PostAction<T, V> = (item?: T) => OptionalPromise<V>;
+export type PostAction<T, V = T> = (item?: V) => OptionalPromise<T>;
